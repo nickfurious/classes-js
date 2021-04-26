@@ -1,23 +1,27 @@
-function catName(name) {
-  console.log("My cat's name is " + name);
+class Slack {
+  constructor(){
+    this.data = [];
+    this.data1 = [];
+    this.top = 0;
+    this.bottom = 0;
+  }
 }
 
-catName("Tiger");
-
-/*
-The result of the code above is: "My cat's name is Tiger"
-*/
-
-catName("Chloe");
-
-function catName(name) {
-  console.log("My cat's name is " + name);
+push(element){
+  this.data[this.top] = element;
+  this.top = this.top + 1;
 }
-/*
-The result of the code above is: "My cat's name is Chloe"
-*/
-catname2("Nick");
 
-function catname2(name) {
-  console.log("My dog's name is " + name);
+length(){
+  return this.top
 }
+
+peek(){
+  return this.data[this.top - 1]
+}
+
+isEmpty() {}
+
+pop() {}
+
+print() {}
