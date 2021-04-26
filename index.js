@@ -1,15 +1,16 @@
 class Slack {
   constructor(){
     this.data = [];
-    this.data1 = [];
     this.top = 0;
     this.bottom = 0;
   }
 }
 
 push(element){
-  this.data[this.top] = element;
-  this.top = this.top + 1;
+  for(i = this.data.length-1, i >= 0; i--){
+    this.data[i + 1] = this.data[i];
+  }
+  this.data[0] = element;
 }
 
 length(){
@@ -25,3 +26,5 @@ isEmpty() {}
 pop() {}
 
 print() {}
+
+console.log(Slack);
